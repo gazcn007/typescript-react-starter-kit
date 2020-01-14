@@ -3,9 +3,9 @@
 import * as React from "react";
 
 interface IProps {
-  /*
-    Size of the button
-  */
+  /**
+   * CSS properties
+   */
   size: "regular" | "large";
   children: React.ReactNode;
 }
@@ -20,7 +20,7 @@ class Button extends React.PureComponent<IProps> {
           border: "none",
           padding: size === "regular" ? "8px 12px" : "12px 16px",
           margin: "4px",
-          background: "hotpink",
+          background: "green",
           borderRadius: "4px",
           color: "white"
         }}
@@ -36,3 +36,4 @@ class Button extends React.PureComponent<IProps> {
 }
 
 export default Button;
+

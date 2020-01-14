@@ -16,7 +16,8 @@ export interface SlidesProps {
 
 interface ICounter {
     initialState: number,
-    totalSize: number
+    totalSize: number,
+    images: string[],
 }
 
 interface ISlides {
@@ -36,7 +37,8 @@ const Slides =  ({ images, currentSlide} : ISlides): JSX.Element => {
         </div>
     )
 };
-const SlideShow = ({ initialState=0 , totalSize=3}: ICounter): JSX.Element => {
+
+const SlideShow = ({ initialState=0 , totalSize=3, images}: ICounter): JSX.Element => {
     const [count, setCount] = useState<number>(0);
     const normalize = (count: number) => {
         let normalizedIndex = count % totalSize;
@@ -47,7 +49,6 @@ const SlideShow = ({ initialState=0 , totalSize=3}: ICounter): JSX.Element => {
     };
     const increment = () => setCount(normalize(count + 1));
     const decrement = () => setCount(normalize(count - 1));
-    const images = ['https://i.imgur.com/mwkyRPd.png', 'https://i.imgur.com/J7OtgXe.png', 'https://i.imgur.com/rcfDSAf.png'];
 
     return (
         <div className='slideshow'>
