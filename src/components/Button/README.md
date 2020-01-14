@@ -1,5 +1,5 @@
 // src/components/Button/README.md
 ```js
-<ButtonFC>Button</ButtonFC>
-<ButtonFC size="large">Button</ButtonFC>
+<Button>Button</Button>
+<Button size="large">Button</Button>
 ```

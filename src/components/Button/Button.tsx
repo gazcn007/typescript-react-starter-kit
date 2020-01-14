@@ -19,6 +19,7 @@ class Button extends React.PureComponent<IProps> {
         style={{
           border: "none",
           padding: size === "regular" ? "8px 12px" : "12px 16px",
+          margin: "4px",
           background: "hotpink",
           borderRadius: "4px",
           color: "white"
@@ -34,22 +35,4 @@ class Button extends React.PureComponent<IProps> {
   };
 }
 
-const ButtonFC = (props: IProps) => {
-	const { size, children, ...rest } = props;
-	return (
-      <button
-        {...rest}
-        style={{
-          border: "none",
-          padding: size === "regular" ? "8px 12px" : "12px 16px",
-          background: "hotpink",
-          borderRadius: "4px",
-          color: "white"
-        }}
-      >
-        {children}
-      </button>
-    );
-}
-
-export default ButtonFC;
+export default Button;

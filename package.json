@@ -18,7 +18,9 @@
   },
   "scripts": {
     "start": "npx styleguidist server",
-    "build": "tsc",
+    "build": "tsc && yarn buildSass && yarn replaceSCSS",
+    "buildSass": "yarn node-sass ./src -o ./lib",
+    "replaceSCSS": "find ./lib -type f -name \\*.jsx -exec sed -i '' -e  \"s/scss/css/g\" {} \\;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
