@@ -1,9 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*",
+        "src/*"
+      ]
+    },
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
+    "rootDir": "./src",
     "strict": true,
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
