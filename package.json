@@ -1,5 +1,5 @@
 {
-  "name": "@patternize/slide-show",
+  "name": "@patternize/components",
   "description": "React components for Patternize.io",
   "version": "0.0.1",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "start": "npx styleguidist server",
     "build": "tsc && yarn buildSass && yarn replaceSCSS",
     "buildSass": "yarn node-sass ./src -o ./lib",
-    "replaceSCSS": "find ./lib -type f -name \\*.jsx -exec sed -i '' -e  \"s/scss/css/g\" {} \\;",
+    "replaceSCSS": "find ./lib -type f -name \\*.js -exec sed -i '' -e  \"s/scss/css/g\" {} \\;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
