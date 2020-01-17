@@ -8,13 +8,15 @@ interface IProps {
    */
   size: "regular" | "large";
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 class Button extends React.PureComponent<IProps> {
   render() {
-    const { size, children, ...rest } = this.props;
+    const { size, children, onClick, ...rest } = this.props;
     return (
       <button
+          onClick={onClick}
         {...rest}
         style={{
           border: "none",
@@ -36,4 +38,3 @@ class Button extends React.PureComponent<IProps> {
 }
 
 export default Button;
-

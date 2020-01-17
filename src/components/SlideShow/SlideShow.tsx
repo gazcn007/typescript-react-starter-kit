@@ -1,13 +1,13 @@
 import * as React from 'react';
+import { Button } from 'components';
 import './SlideShow.scss';
 
-const { useState} = React;
+const { useState } = React;
 
 export type SlideEffect = 'fade' | 'slide';
 export type ControllerPostition = 'top' | 'bottom';
 
-// Carousel
-export interface SlidesProps {
+interface SlidesProps {
     effect?: SlideEffect;
     style?: React.CSSProperties;
     controllerPostition?: ControllerPostition;
@@ -55,8 +55,8 @@ const SlideShow = ({ initialState=0 , totalSize=3, images}: ICounter): JSX.Eleme
             <Slides images={images} currentSlide={count}/>
 
             <div className="slides-nav">
-                <div className="button left" onClick={decrement}>Previous</div>
-                <div className="button right" onClick={increment}>Next</div>
+                <Button onClick={decrement}>Previous</Button>
+                <Button onClick={increment}>Next</Button>
             </div>
         </div>
     );
