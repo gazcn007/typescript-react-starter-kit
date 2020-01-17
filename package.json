@@ -1,7 +1,7 @@
 {
-  "name": "@patternize/components",
-  "description": "React components for Patternize.io",
-  "version": "0.0.3",
+  "name": "components",
+  "description": "React components for <org>",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "./lib/components/index.js",
   "dependencies": {
